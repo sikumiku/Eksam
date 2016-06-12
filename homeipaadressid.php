@@ -5,7 +5,7 @@
 	<meta charset="utf-8" />
 
 	<link rel="stylesheet" type="text/css" href="stylefile.css">
-  	<script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  	
 	<script src="projectscript.js"></script>
 
 	<title>Eksam - v6rgurakendused</title>
@@ -81,7 +81,9 @@
 		    
 			?>	
 
-			
+			<p>Oled lehel viibinud:</p>
+   			<br/>
+    		<label id="minutes">00</label>:<label id="seconds">00</label>
 
 			<table>
 				<tr>
