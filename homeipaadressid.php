@@ -84,6 +84,7 @@
 			<p>Oled lehel viibinud:</p>
    			<br/>
     		<label id="minutes">00</label>:<label id="seconds">00</label>
+    		<p>kahjuks tundub, et loendur ei l2inud t66le</p>
 
 			<table>
 				<tr>
