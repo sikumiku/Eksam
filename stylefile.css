@@ -1,0 +1,107 @@
+html { height: 100%; }
+
+body {
+ 	font: 90% helvetica, sans-serif;
+ 	line-height: 1.5;
+ 	height: 100%; 
+ 	margin: 0; 
+ 	padding: 0;
+ 	background-image: url(Pildid/wallhaven-169278.png);
+ 	
+}
+ 
+* {
+     box-sizing: border-box;
+}
+ 
+div.body {
+ 	display: inline-block;
+ 	width: 100%;
+}
+ 
+div.column1 {
+ 	display: inline-block;
+     float: left;
+     width: 33.33%;
+     padding: 50px;
+    
+}
+ 
+div.column2 {
+ 	display: inline-block;
+     float: left;
+     width: 33.33%;
+     padding-top: 20px;
+     padding-left: 70px;
+     padding-right: 70px;
+     
+}
+ 
+div.column3 {
+ 	display: inline-block;
+     float: right;
+     width: 33.33%;
+     padding: 50px;
+    
+}
+ 
+.banner ul {
+ 	background-color: black;
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+}
+ 
+.banner_left{
+     float: left;
+}
+
+.banner_right{
+     float: right;
+}
+ 
+.banner li a {
+ 	color: white;
+     display: block;
+     padding-top: 30px;
+     padding-bottom: 30px;
+     padding-left: 30px;
+     padding-right: 30px;
+     background-color: black;
+     text-decoration: none;
+     font: 120% helvetica, sans-serif;
+}
+ 
+ 
+p { 
+ 	margin-top: 70px;
+ 	text-align: justify;
+}
+
+h1 {
+ 	text-align: center;
+}
+ 
+.body2 {
+ 	padding: 100px;
+ 	display: inline-block;
+  	margin: auto;
+  	
+}
+
+#html-validator {
+	margin-bottom: 0 !important;
+    position: fixed;
+    bottom: 0;
+    z-index: 10000;
+    border-radius: 0 0 0.5em 0.5em;
+}
+
+table {
+    border: 3px solid black;
+}
+
+td {
+    border: 1px solid black;
+}
