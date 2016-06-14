@@ -50,42 +50,40 @@
 				mysqli_query($connection, "SET CHARACTER SET UTF8") or die("Ei saanud baasi utf-8-sse - ".mysqli_error($connection));
 
 				$sql= 'INSERT into saasma_eksam_ip(ip) values ("'.$ip.'") ';
+
+				$result = mysqli_query($connection, $sql);
 				
 							    
-					$sqlselect='SELECT ip, timestamp FROM saasma_eksam_ip WHERE timestamp>= DATE_SUB(NOW(),INTERVAL 1440 MINUTE) ';
+				$sqlselect='SELECT ip, timestamp FROM saasma_eksam_ip WHERE timestamp>= DATE_SUB(NOW(),INTERVAL 1440 MINUTE) ';
 
-					$result1 = mysqli_query($connection, $sqlselect);
-					if ($result1) {
+				$result1 = mysqli_query($connection, $sqlselect);
+				if ($result1) {
 
-						$ipquery = array();
+					$ipquery = array();
 
-						while($ips = mysqli_fetch_array($result1)) {
-							$ipquery[] = $ips;
-						}
+					while($ips = mysqli_fetch_array($result1)) {
+						$ipquery[] = $ips;
 					}
+				}
 
 
-					$sqlcount = 'SELECT COUNT(*) FROM saasma_eksam_ip';
+				$sqlcount = 'SELECT COUNT(DISTINCT ip) FROM saasma_eksam_ip';
 
-					$result2 = mysqli_query($connection, $sqlcount);
+				$result2 = mysqli_query($connection, $sqlcount);
 
-					if ($result2) {
+				if ($result2) {
 
-						$countquery = array();
+					$countquery = array();
 
-						while($count = mysqli_fetch_array($result2)) {
-							$countquery[] = $count;
-						}
+					while($count = mysqli_fetch_array($result2)) {
+						$countquery[] = $count;
 					}
+				}
 		
 		    
 			?>	
 
-			<p>Oled lehel viibinud:</p>
-   			<br/>
-    		<label id="minutes">00</label>:<label id="seconds">00</label>
-    		<p>kahjuks tundub, et loendur ei l2inud t66le</p>
-
+			
 			<table>
 				<tr>
 					<td> IP aadress </td>
@@ -107,7 +105,7 @@
 			<?php endif; ?>
 
 			<p>
-				Total visitors today: <?php foreach ($countquery as $count) :?>
+				Total different visitors: <?php foreach ($countquery as $count) :?>
 				<?php echo $count[0]; ?>
 				<?php endforeach; ?> 
 			
